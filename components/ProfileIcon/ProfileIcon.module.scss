@@ -1,0 +1,37 @@
+@import "../../styles/properties.module";
+
+.storyBorder {
+  padding: 2px;
+  background: linear-gradient(
+    200deg,
+    $gradient-one 25%,
+    $gradient-one 50%,
+    $gradient-one 75%,
+    $gradient-one 100%
+  );
+  border-radius: 50%;
+}
+
+.profileIcon {
+  border-radius: 50%;
+  border: 2px solid $background-white;
+  display: block;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.extrasmall {
+    width: 15px;
+  }
+
+  &.small {
+    width: 30px;
+  }
+  &.medium {
+    width: 50px;
+  }
+  &.large {
+    width: 60px;
+  }
+}

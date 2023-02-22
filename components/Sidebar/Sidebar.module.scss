@@ -1,0 +1,13 @@
+@import "../../styles/breakpoints.module";
+
+.sidebar {
+  display: none;
+  width: 320px;
+  padding: 7em 2em 0 2em;
+}
+
+@include xl {
+  .sidebar {
+    display: block;
+  }
+}

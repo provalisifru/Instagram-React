@@ -1,0 +1,71 @@
+@import "../../styles/properties.module", "../../styles/breakpoints.module";
+
+.navigation {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  background-color: $background-white;
+  width: 100%;
+  border-bottom: 1px solid $border-color-grey;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em 0 0.9em 0;
+
+  .logo {
+    cursor: pointer;
+    height: 30px;
+    width: 100px;
+    z-index: 4;
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+}
+.search {
+  border: 1px solid rgb(238, 238, 238);
+  background-color: rgb(238, 238, 238);
+  border-radius: 5px;
+  display: flex;
+  min-width: 225px;
+  min-height: 30px;
+  align-items: center;
+  justify-content: center;
+  cursor: text;
+
+  .searchIcon {
+    width: 15px;
+    margin-right: 0.3em;
+    opacity: 0.4;
+  }
+
+  .searchText {
+    color: $font-color-secondary;
+    font-size: 0.85em;
+    font-weight: 300;
+  }
+
+  .searchInput {
+    border-style: none;
+    background-color: rgb(238, 238, 238);
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@include md {
+  .search {
+    display: none !important;
+  }
+  .logo {
+    margin-left: 20px;
+  }
+}

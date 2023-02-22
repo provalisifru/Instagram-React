@@ -1,0 +1,60 @@
+@import "../../styles/properties.module", "../../styles/breakpoints.module";
+
+.stories {
+  display: flex;
+  align-content: center;
+  background-color: $background-white;
+  border: 1px solid $border-color-grey;
+  border-radius: 3px;
+  margin: 2em 0 1.5em 0;
+  height: 7.4em;
+  overflow: hidden;
+}
+.scroll {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 0;
+}
+
+.leftScroll {
+  position: relative;
+  background-color: white;
+  top: 30%;
+  left: 5%;
+  border-radius: 50%;
+  border-style: none;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+.rightScroll {
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+  top: 30%;
+  right: 5%;
+  border-radius: 50%;
+  border-style: none;
+  height: 20px;
+  width: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+@include md {
+  .stories {
+    margin: 0 0 0.5em 0;
+  }
+}
+@include md {
+  .rightScroll,
+  .leftScroll {
+    display: none;
+  }
+}

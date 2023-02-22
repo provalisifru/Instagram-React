@@ -1,0 +1,8 @@
+@import "../../styles/properties.module";
+
+.chats {
+  border-right: 1px solid $border-color-grey;
+  background-color: $background-white;
+  padding-top: 5px;
+  overflow: auto;
+}

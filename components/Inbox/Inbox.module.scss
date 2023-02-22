@@ -1,0 +1,136 @@
+@import "../../styles/properties.module";
+
+.inboxContainer {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  max-height: 94vh;
+  box-sizing: border-box;
+}
+
+.inbox {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid $border-color-grey;
+  background-color: $background-white;
+  border-radius: 3px;
+  width: 993px;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+
+  .inboxOptions {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    border-right: 1px solid $border-color-grey;
+    border-bottom: 1px solid $border-color-grey;
+    background-color: $background-white;
+    padding: 20px;
+
+    .username {
+      align-content: center;
+      margin: auto;
+      padding-left: 20px;
+      cursor: pointer;
+
+      .arrowDown {
+        display: inline-block;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+.chats {
+  overflow: auto;
+}
+
+.rightSide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .infoBar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-color-grey;
+    background-color: $background-white;
+    align-items: center;
+    padding: 10px;
+  }
+  .callOptions {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+    background-color: white;
+  }
+  .call {
+    margin-right: 20px;
+  }
+  .profile {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+
+    margin-left: 10px;
+    .accountName {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .messages {
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .addMessage {
+    margin: 10px;
+    border-radius: 20px;
+    border: 1px solid $border-color-grey;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    .icon {
+      background-color: white;
+      border: none;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+  }
+  .writeMessage {
+    width: 60%;
+    border: none;
+    padding-left: 10px;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 993px) {
+  .inbox {
+    width: 100vw;
+  }
+  .inboxContainer {
+    padding-top: 60px;
+    max-height: 100vh;
+    max-width: 100vw;
+  }
+  .leftSide {
+    min-width: 40%;
+  }
+  .rightSide {
+    min-width: 50%;
+    .profile {
+      width: 100px;
+    }
+  }
+}

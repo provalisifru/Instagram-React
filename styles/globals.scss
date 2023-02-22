@@ -1,0 +1,68 @@
+@import "./properties.module", "./breakpoints.module";
+
+* {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $background-white;
+  font-family: $font;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  min-width: fit-content;
+}
+
+main {
+  background-color: $background-grey;
+  margin-top: 60px;
+
+  .container {
+    display: flex;
+    justify-content: left;
+    max-width: 1300px;
+    align-items: flex-start;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+@include xl {
+  main .container {
+    justify-content: center !important;
+  }
+}
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.storyChange-enter {
+  opacity: 0;
+}
+.storyChange-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.progress-enter {
+  max-width: 0%;
+}
+.progress-enter-active {
+  max-width: 100%;
+  transition: max-width 7s linear;
+}

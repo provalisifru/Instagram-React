@@ -1,0 +1,25 @@
+@import "../../styles/properties.module";
+.chat {
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  cursor: pointer;
+
+  &:active {
+    background-color: $chat-click;
+  }
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.accountName {
+  font-weight: 500;
+  font-size: 0.9em;
+}
+.lastMessage {
+  margin-top: 5px;
+  font-size: 0.8em;
+  opacity: 0.5;
+}
